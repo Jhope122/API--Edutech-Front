@@ -2,11 +2,15 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+import cors from "cors"; 
+
 import alunosRoutes from "./routes/alunos.js";
 import cursosRoutes from "./routes/cursos.js";
 import matriculasRoutes from "./routes/matriculas.js";
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
